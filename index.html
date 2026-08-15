@@ -12,123 +12,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="wrap navbar" aria-label="Main navigation">
-      <a class="brand" href="#home" aria-label="Akhil Rana home">Akhil Rana</a>
-      <div class="navlinks">
-        <a href="#home" data-section="home">Home</a>
-        <a href="#work" data-section="work">Work</a>
-        <a href="#about" data-section="about">About</a>
-        <a href="#contact" data-section="contact">Contact</a>
-        <a class="resume-button" href="mailto:akhuniikhu5523@gmail.com?subject=Resume%20request">Resume</a>
-      </div>
-    </nav>
-  </header>
-
+  <header class="site-header"><nav class="wrap navbar" aria-label="Main navigation">
+    <a class="brand" href="#home" aria-label="Akhil Rana home">Akhil Rana</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"><span class="sr-only">Toggle navigation</span><span></span><span></span></button>
+    <div class="navlinks" id="site-navigation"><a href="#home" data-section="home">Home</a><a href="#experience" data-section="experience">Experience</a><a href="#work" data-section="work">Work</a><a href="#about" data-section="about">About</a><a href="#contact" data-section="contact">Contact</a><a class="resume-button" href="mailto:akhuniikhu5523@gmail.com?subject=Resume%20request">Resume</a></div>
+  </nav></header>
   <main>
-    <section class="hero" id="home">
-      <div class="wrap hero-content">
-        <p class="eyebrow">Software engineer · Full-stack developer</p>
-        <h1><span>Building digital products that</span><em>feel right.</em></h1>
-        <p class="hero-summary">I’m Akhil Rana, a developer who turns practical ideas into fast, thoughtful web experiences—from the first schema to the final interface.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#work">View work <span aria-hidden="true">→</span></a>
-          <a class="button secondary" href="#contact">Contact me</a>
-        </div>
-        <div class="hero-meta" aria-label="Portfolio highlights">
-          <span>Based in Himachal Pradesh, India</span>
-          <span>Available for opportunities</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="work">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Selected work</p>
-          <h2>Useful products, built end to end.</h2>
-          <p>A selection of web projects shaped around clear flows, dependable backends, and polished interfaces.</p>
-        </div>
-        <div class="work-grid">
-          <article class="project-card featured" data-project="0" tabindex="0" role="button" aria-label="Open E-Commerce Website project details">
-            <p class="project-kicker">01 / Full stack</p>
-            <h3>E-Commerce Website</h3>
-            <p>A complete storefront for browsing, cart management, secure access, and order processing with MongoDB.</p>
-            <a class="project-link" href="https://github.com/AkhilRana2004/Ecommerce-Website" target="_blank" rel="noopener">View repository ↗</a>
-          </article>
-          <article class="project-card tall" data-project="1" tabindex="0" role="button" aria-label="Open Sushi Restaurant Website project details">
-            <p class="project-kicker">02 / Web platform</p>
-            <h3>Sushi Restaurant Website</h3>
-            <p>Responsive dining experience with interactive menus and an inquiry backend.</p>
-            <a class="project-link" href="https://github.com/AkhilRana2004/Sushi-Lover-Website" target="_blank" rel="noopener">View repository ↗</a>
-          </article>
-          <article class="project-card" data-project="2" tabindex="0" role="button" aria-label="Open Job Finder and Expense Tracker project details">
-            <p class="project-kicker">03 / Frontend</p>
-            <h3>Job Finder &amp; Expense Tracker</h3>
-            <p>Two focused applications for finding roles and tracking daily finances.</p>
-            <a class="project-link" href="https://github.com/AkhilRana2004/Projects-frontend" target="_blank" rel="noopener">View repository ↗</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="wrap about-layout">
-        <div class="about-copy">
-          <p class="eyebrow">About me</p>
-          <h2>Clear thinking, practical execution.</h2>
-          <p>I’m a Computer Science Engineering graduate from Chandigarh University. I enjoy the hands-on work of translating an idea into a real product: designing an intuitive interface, structuring the data behind it, and refining every detail until it works well.</p>
-          <p>My focus is full-stack development, but I’m always keen to learn the tool that makes a product simpler, faster, or more useful.</p>
-        </div>
-        <div class="skills-panel">
-          <h3>My toolkit</h3>
-          <div class="pill-list" aria-label="Technical skills">
-            <span class="pill"><i class="devicon-javascript-plain"></i>JavaScript</span>
-            <span class="pill"><i class="devicon-nodejs-plain"></i>Node.js</span>
-            <span class="pill"><i class="devicon-express-original"></i>Express</span>
-            <span class="pill"><i class="devicon-mongodb-plain"></i>MongoDB</span>
-            <span class="pill"><i class="devicon-react-original"></i>React</span>
-            <span class="pill"><i class="devicon-html5-plain"></i>HTML / CSS</span>
-            <span class="pill"><i class="devicon-python-plain"></i>Python</span>
-            <span class="pill"><i class="devicon-java-plain"></i>Java</span>
-            <span class="pill"><i class="devicon-cplusplus-plain"></i>C / C++</span>
-            <span class="pill"><i class="devicon-mysql-plain"></i>MySQL</span>
-            <span class="pill"><i class="devicon-fastapi-plain"></i>REST APIs</span>
-            <span class="pill"><i class="devicon-git-plain"></i>Git / GitHub</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <div class="wrap contact-card">
-        <div class="contact-copy">
-          <p class="eyebrow">Start a conversation</p>
-          <h2>Have a product in mind? Let’s make it real.</h2>
-          <p>I’m open to full-stack development opportunities and meaningful collaborations.</p>
-        </div>
-        <a class="button primary" href="mailto:akhuniikhu5523@gmail.com">akhuniikhu5523@gmail.com</a>
-        <div class="contact-links">
-          <a href="tel:7888948258">+91 78889 48258</a>
-          <a href="https://github.com/AkhilRana2004" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/akhil-rana-6ba36b231" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-    </section>
+    <section class="hero" id="home"><div class="wrap hero-content"><p class="eyebrow">Full-stack web developer · WordPress specialist</p><h1><span>Web experiences,</span><em>built with purpose.</em></h1><p class="hero-summary">I’m Akhil Rana. I design and develop fast, accessible websites and web applications that make a strong impression and work beautifully on every screen.</p><div class="hero-actions"><a class="button primary" href="#work">Explore my work <span aria-hidden="true">→</span></a><a class="button secondary" href="#contact">Let’s talk</a></div><div class="hero-meta" aria-label="Portfolio highlights"><span>Based in Himachal Pradesh, India</span><span>Open to opportunities</span></div></div></section>
+    <section class="section experience-section" id="experience"><div class="wrap"><div class="section-heading"><p class="eyebrow">Experience</p><h2>Turning ideas into polished web experiences.</h2><p>Professional experience building responsive, maintainable websites that balance visual craft with reliable implementation.</p></div><article class="experience-card"><div class="experience-mark" aria-hidden="true">CM</div><div class="experience-content"><div class="experience-title-row"><div><p class="project-kicker">Jul 2026 – Present</p><h3>Web Developer</h3><p class="company-name">CyberMedia <span>·</span> Part-time</p></div><p class="experience-location">Gurugram, Haryana, India<br>On-site</p></div><p class="experience-summary">Contributing to web design and development work, with a focus on polished WordPress experiences and reliable, responsive front-end implementation.</p><div class="pill-list" aria-label="CyberMedia skills"><span class="pill">WordPress Design</span><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span><span class="pill">PHP</span><span class="pill">Responsive Design</span><span class="pill">Adobe Photoshop</span><span class="pill">CorelDraw</span></div></div><a class="experience-link" href="https://www.linkedin.com/in/akhil-rana-6aa03228b/" target="_blank" rel="noopener">View on LinkedIn <span aria-hidden="true">↗</span></a></article></div></section>
+    <section class="section" id="work"><div class="wrap"><div class="section-heading"><p class="eyebrow">Selected work</p><h2>Selected work, built with intent.</h2><p>A selection of products shaped around intuitive flows, dependable functionality, and thoughtful interfaces.</p></div><div class="work-grid">
+      <article class="project-card featured" data-project="0" tabindex="0" role="button"><p class="project-kicker">01 / Full stack</p><h3>E-Commerce Website</h3><p>A complete storefront for browsing, cart management, secure access, and order processing with MongoDB.</p><a class="project-link" href="https://github.com/AkhilRana2004/Ecommerce-Website" target="_blank" rel="noopener">View repository ↗</a></article>
+      <article class="project-card tall" data-project="1" tabindex="0" role="button"><p class="project-kicker">02 / Web platform</p><h3>Sushi Restaurant Website</h3><p>Responsive dining experience with interactive menus and an inquiry backend.</p><a class="project-link" href="https://github.com/AkhilRana2004/Sushi-Lover-Website" target="_blank" rel="noopener">View repository ↗</a></article>
+      <article class="project-card" data-project="2" tabindex="0" role="button"><p class="project-kicker">03 / Frontend</p><h3>Job Finder &amp; Expense Tracker</h3><p>Two focused applications for finding roles and tracking daily finances.</p><a class="project-link" href="https://github.com/AkhilRana2004/Projects-frontend" target="_blank" rel="noopener">View repository ↗</a></article>
+      <article class="project-card" data-project="3" tabindex="0" role="button"><p class="project-kicker">04 / Media dashboard</p><h3>Movie Web Application</h3><p>A high-performance media exploration dashboard with responsive discovery and asynchronous filtering.</p><a class="project-link" href="https://github.com/AkhilRana2004/Movie-Website" target="_blank" rel="noopener">View repository ↗</a></article>
+      <article class="project-card" data-project="4" tabindex="0" role="button"><p class="project-kicker">05 / Personal platform</p><h3>Professional Portfolio Ecosystem</h3><p>A lightweight technical portfolio with custom interactions and a performance-first foundation.</p><a class="project-link" href="https://github.com/AkhilRana2004/Portfolio-Website" target="_blank" rel="noopener">View repository ↗</a></article>
+    </div></div></section>
+    <section class="section" id="about"><div class="wrap about-layout"><div class="about-copy"><p class="eyebrow">About me</p><h2>Clear thinking. Practical execution.</h2><p>I’m a Computer Science Engineering graduate from Chandigarh University. I enjoy the hands-on work of translating an idea into a real product: designing an intuitive interface, structuring the data behind it, and refining every detail until it works well.</p><p>My focus is full-stack development, but I’m always keen to learn the tool that makes a product simpler, faster, or more useful.</p></div><div class="skills-panel"><h3>My toolkit</h3><div class="pill-list" aria-label="Technical skills"><span class="pill"><i class="devicon-javascript-plain"></i>JavaScript</span><span class="pill"><i class="devicon-nodejs-plain"></i>Node.js</span><span class="pill"><i class="devicon-express-original"></i>Express</span><span class="pill"><i class="devicon-mongodb-plain"></i>MongoDB</span><span class="pill"><i class="devicon-react-original"></i>React</span><span class="pill"><i class="devicon-html5-plain"></i>HTML / CSS</span><span class="pill"><i class="devicon-python-plain"></i>Python</span><span class="pill"><i class="devicon-java-plain"></i>Java</span><span class="pill"><i class="devicon-cplusplus-plain"></i>C / C++</span><span class="pill"><i class="devicon-mysql-plain"></i>MySQL</span><span class="pill"><i class="devicon-fastapi-plain"></i>REST APIs</span><span class="pill"><i class="devicon-git-plain"></i>Git / GitHub</span></div></div></div></section>
+    <section class="section contact-section" id="contact"><div class="wrap contact-card"><div class="contact-copy"><p class="eyebrow">Start a conversation</p><h2>Have a project in mind? Let’s build it well.</h2><p>I’m open to web development opportunities, freelance work, and meaningful collaborations.</p></div><a class="button primary" href="mailto:akhuniikhu5523@gmail.com">akhuniikhu5523@gmail.com</a><div class="contact-links"><a href="tel:7888948258">+91 78889 48258</a><a href="https://github.com/AkhilRana2004" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/akhil-rana-6aa03228b/" target="_blank" rel="noopener">LinkedIn</a></div></div></section>
   </main>
-
   <footer><div class="wrap">© 2026 Akhil Rana. Designed and built with intent.</div></footer>
-
-  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-content">
-      <button class="modal-close" id="closeModal" aria-label="Close project details">×</button>
-      <p class="eyebrow" id="modalMeta">Project details</p>
-      <h2 id="modalTitle">Project title</h2>
-      <p id="modalDesc"></p>
-      <div class="pill-list" id="modalStack"></div>
-      <a class="button primary" href="#" target="_blank" rel="noopener" id="modalLink">Browse repository ↗</a>
-    </div>
-  </div>
+  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-content"><button class="modal-close" id="closeModal" aria-label="Close project details">×</button><p class="eyebrow" id="modalMeta">Project details</p><h2 id="modalTitle">Project title</h2><p id="modalDesc"></p><div class="pill-list" id="modalStack"></div><a class="button primary" href="#" target="_blank" rel="noopener" id="modalLink">Browse repository ↗</a></div></div>
   <script src="app.js"></script>
-</body>
-</html>
+</body></html>

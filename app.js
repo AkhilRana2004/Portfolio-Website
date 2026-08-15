@@ -19,14 +19,42 @@ const projectData = [
     desc: "A pair of focused applications: a Job Finder with search, filtering, and REST API integration, plus a Personal Expense Tracker with live balance updates.",
     stack: ["HTML", "CSS", "JavaScript", "Node.js", "Express"],
     link: "https://github.com/AkhilRana2004/Projects-frontend"
+  },
+  {
+    title: "Movie Web Application",
+    meta: "Media dashboard · JavaScript",
+    desc: "A feature-rich, mobile-first multimedia dashboard for seamless cinematic discovery across devices. Built with modern JavaScript, it ingests and filters real-time data without heavy framework overhead. It includes adaptive responsive media grids, asynchronous search and pagination workflows powered by Promises, and component-based styling designed to minimize layout shifts.",
+    stack: ["HTML", "CSS", "JavaScript", "Responsive Design", "Async APIs"],
+    link: "https://github.com/AkhilRana2004/Movie-Website"
+  },
+  {
+    title: "Professional Portfolio Ecosystem",
+    meta: "Personal platform · ES modules",
+    desc: "A lightweight, high-performance portfolio for presenting technical proficiencies and project milestones. Its modular architecture keeps critical rendering paths lean for smooth interaction across desktop and mobile. It features custom particle-node physics, a native terminal-style typewriter engine, and an isolated production layout with clean standalone structures.",
+    stack: ["HTML", "CSS", "JavaScript", "ES Modules", "Performance"],
+    link: "https://github.com/AkhilRana2004/Portfolio-Website"
   }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.querySelector(".nav-toggle");
+  const navigation = document.getElementById("site-navigation");
   const modal = document.getElementById("projectModal");
   const closeModalButton = document.getElementById("closeModal");
   const projectCards = document.querySelectorAll(".project-card");
   let lastTrigger = null;
+
+  const closeNavigation = () => {
+    navigation?.classList.remove("is-open");
+    navToggle?.setAttribute("aria-expanded", "false");
+  };
+
+  navToggle?.addEventListener("click", () => {
+    const isOpen = navigation.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  navigation?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeNavigation));
 
   const closeModal = () => {
     modal.classList.remove("show");
@@ -74,7 +102,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   closeModalButton.addEventListener("click", closeModal);
   modal.addEventListener("click", (event) => { if (event.target === modal) closeModal(); });
-  document.addEventListener("keydown", (event) => { if (event.key === "Escape" && modal.classList.contains("show")) closeModal(); });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.classList.contains("show")) closeModal();
+    if (event.key === "Escape") closeNavigation();
+  });
 
   const navLinks = document.querySelectorAll(".navlinks a[data-section]");
   const sections = document.querySelectorAll("main section[id]");
