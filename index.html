@@ -3,34 +3,427 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Akhil Rana — Software Engineer and Full-Stack Developer.">
-  <title>Akhil Rana — Software Engineer</title>
+  <meta name="description" content="Akhil Rana — Full-Stack Software Engineer & Creative Developer specializing in Node.js, React, and modern web architectures.">
+  <title>Akhil Rana — Software Engineer & Full-Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header"><nav class="wrap navbar" aria-label="Main navigation">
-    <a class="brand" href="#home" aria-label="Akhil Rana home">Akhil Rana</a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"><span class="sr-only">Toggle navigation</span><span></span><span></span></button>
-    <div class="navlinks" id="site-navigation"><a href="#home" data-section="home">Home</a><a href="#experience" data-section="experience">Experience</a><a href="#work" data-section="work">Work</a><a href="#about" data-section="about">About</a><a href="#contact" data-section="contact">Contact</a><a class="resume-button" href="mailto:akhuniikhu5523@gmail.com?subject=Resume%20request">Resume</a></div>
-  </nav></header>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Custom Ambient Cursor Follower (Desktop) -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Dynamic Interactive Particle Canvas Background -->
+  <canvas id="ambientCanvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <nav class="wrap navbar" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Akhil Rana home">
+        <span class="brand-status-dot"></span>
+        <span class="brand-name">Akhil<span class="brand-accent">.dev</span></span>
+      </a>
+      
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <div class="navlinks" id="site-navigation">
+        <a href="#home" data-section="home" class="nav-item"><span>01.</span> Home</a>
+        <a href="#experience" data-section="experience" class="nav-item"><span>02.</span> Experience</a>
+        <a href="#work" data-section="work" class="nav-item"><span>03.</span> Work</a>
+        <a href="#about" data-section="about" class="nav-item"><span>04.</span> About</a>
+        <a href="#contact" data-section="contact" class="nav-item"><span>05.</span> Contact</a>
+        <a class="resume-button" href="mailto:akhuniikhu5523@gmail.com?subject=Resume%20request">
+          <span>Get Resume</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
+      </div>
+    </nav>
+  </header>
+
   <main>
-    <section class="hero" id="home"><div class="wrap hero-content"><p class="eyebrow">Full-stack web developer · WordPress specialist</p><h1><span>Web experiences,</span><em>built with purpose.</em></h1><p class="hero-summary">I’m Akhil Rana. I design and develop fast, accessible websites and web applications that make a strong impression and work beautifully on every screen.</p><div class="hero-actions"><a class="button primary" href="#work">Explore my work <span aria-hidden="true">→</span></a><a class="button secondary" href="#contact">Let’s talk</a></div><div class="hero-meta" aria-label="Portfolio highlights"><span>Based in Himachal Pradesh, India</span><span>Open to opportunities</span></div></div></section>
-    <section class="section experience-section" id="experience"><div class="wrap"><div class="section-heading"><p class="eyebrow">Experience</p><h2>Turning ideas into polished web experiences.</h2><p>Professional experience building responsive, maintainable websites that balance visual craft with reliable implementation.</p></div><article class="experience-card"><div class="experience-mark" aria-hidden="true">CM</div><div class="experience-content"><div class="experience-title-row"><div><p class="project-kicker">Jul 2026 – Present</p><h3>Web Developer</h3><p class="company-name">CyberMedia <span>·</span> Part-time</p></div><p class="experience-location">Gurugram, Haryana, India<br>On-site</p></div><p class="experience-summary">Contributing to web design and development work, with a focus on polished WordPress experiences and reliable, responsive front-end implementation.</p><div class="pill-list" aria-label="CyberMedia skills"><span class="pill">WordPress Design</span><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span><span class="pill">PHP</span><span class="pill">Responsive Design</span><span class="pill">Adobe Photoshop</span><span class="pill">CorelDraw</span></div></div><a class="experience-link" href="https://www.linkedin.com/in/akhil-rana-6aa03228b/" target="_blank" rel="noopener">View on LinkedIn <span aria-hidden="true">↗</span></a></article></div></section>
-    <section class="section" id="work"><div class="wrap"><div class="section-heading"><p class="eyebrow">Selected work</p><h2>Selected work, built with intent.</h2><p>A selection of products shaped around intuitive flows, dependable functionality, and thoughtful interfaces.</p></div><div class="work-grid">
-      <article class="project-card featured" data-project="0" tabindex="0" role="button"><p class="project-kicker">01 / Full stack</p><h3>E-Commerce Website</h3><p>A complete storefront for browsing, cart management, secure access, and order processing with MongoDB.</p><a class="project-link" href="https://github.com/AkhilRana2004/Ecommerce-Website" target="_blank" rel="noopener">View repository ↗</a></article>
-      <article class="project-card tall" data-project="1" tabindex="0" role="button"><p class="project-kicker">02 / Web platform</p><h3>Sushi Restaurant Website</h3><p>Responsive dining experience with interactive menus and an inquiry backend.</p><a class="project-link" href="https://github.com/AkhilRana2004/Sushi-Lover-Website" target="_blank" rel="noopener">View repository ↗</a></article>
-      <article class="project-card" data-project="2" tabindex="0" role="button"><p class="project-kicker">03 / Frontend</p><h3>Job Finder &amp; Expense Tracker</h3><p>Two focused applications for finding roles and tracking daily finances.</p><a class="project-link" href="https://github.com/AkhilRana2004/Projects-frontend" target="_blank" rel="noopener">View repository ↗</a></article>
-      <article class="project-card" data-project="3" tabindex="0" role="button"><p class="project-kicker">04 / Media dashboard</p><h3>Movie Web Application</h3><p>A high-performance media exploration dashboard with responsive discovery and asynchronous filtering.</p><a class="project-link" href="https://github.com/AkhilRana2004/Movie-Website" target="_blank" rel="noopener">View repository ↗</a></article>
-      <article class="project-card" data-project="4" tabindex="0" role="button"><p class="project-kicker">05 / Personal platform</p><h3>Professional Portfolio Ecosystem</h3><p>A lightweight technical portfolio with custom interactions and a performance-first foundation.</p><a class="project-link" href="https://github.com/AkhilRana2004/Portfolio-Website" target="_blank" rel="noopener">View repository ↗</a></article>
-    </div></div></section>
-    <section class="section" id="about"><div class="wrap about-layout"><div class="about-copy"><p class="eyebrow">About me</p><h2>Clear thinking. Practical execution.</h2><p>I’m a Computer Science Engineering graduate from Chandigarh University. I enjoy the hands-on work of translating an idea into a real product: designing an intuitive interface, structuring the data behind it, and refining every detail until it works well.</p><p>My focus is full-stack development, but I’m always keen to learn the tool that makes a product simpler, faster, or more useful.</p></div><div class="skills-panel"><h3>My toolkit</h3><div class="pill-list" aria-label="Technical skills"><span class="pill"><i class="devicon-javascript-plain"></i>JavaScript</span><span class="pill"><i class="devicon-nodejs-plain"></i>Node.js</span><span class="pill"><i class="devicon-express-original"></i>Express</span><span class="pill"><i class="devicon-mongodb-plain"></i>MongoDB</span><span class="pill"><i class="devicon-react-original"></i>React</span><span class="pill"><i class="devicon-html5-plain"></i>HTML / CSS</span><span class="pill"><i class="devicon-python-plain"></i>Python</span><span class="pill"><i class="devicon-java-plain"></i>Java</span><span class="pill"><i class="devicon-cplusplus-plain"></i>C / C++</span><span class="pill"><i class="devicon-mysql-plain"></i>MySQL</span><span class="pill"><i class="devicon-fastapi-plain"></i>REST APIs</span><span class="pill"><i class="devicon-git-plain"></i>Git / GitHub</span></div></div></div></section>
-    <section class="section contact-section" id="contact"><div class="wrap contact-card"><div class="contact-copy"><p class="eyebrow">Start a conversation</p><h2>Have a project in mind? Let’s build it well.</h2><p>I’m open to web development opportunities, freelance work, and meaningful collaborations.</p></div><a class="button primary" href="mailto:akhuniikhu5523@gmail.com">akhuniikhu5523@gmail.com</a><div class="contact-links"><a href="tel:7888948258">+91 78889 48258</a><a href="https://github.com/AkhilRana2004" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/akhil-rana-6aa03228b/" target="_blank" rel="noopener">LinkedIn</a></div></div></section>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="wrap hero-content">
+        <div class="hero-badge reveal">
+          <span class="badge-pulse"></span>
+          <span>Available for New Roles & High-Impact Projects</span>
+        </div>
+
+        <h1 class="hero-title reveal">
+          Architecting High Performance
+          <span class="gradient-text typewrite-wrapper">
+            <span id="typedText">Web Applications</span>
+            <span class="cursor-blink">|</span>
+          </span>
+        </h1>
+
+        <p class="hero-summary reveal">
+          I’m <strong class="text-white">Akhil Rana</strong>, a Full-Stack Software Engineer focused on designing scalable web systems, clean API architectures, and fluid, high-converting digital interfaces.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a class="button primary glow-button" href="#work">
+            <span>Explore Featured Work</span>
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a class="button secondary" href="#contact">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+
+        <!-- Quick Stats Strip -->
+        <div class="hero-stats reveal">
+          <div class="stat-item">
+            <span class="stat-number">Full-Stack</span>
+            <span class="stat-label">Engineering Focus</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Production Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">India</span>
+            <span class="stat-label">Himachal / Gurugram</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="scroll-hint reveal" aria-hidden="true">
+        <span>SCROLL DOWN</span>
+        <div class="scroll-mouse"><div class="mouse-wheel"></div></div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience-section" id="experience">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span class="eyebrow-num">02 /</span> Career Path</p>
+          <h2>Work &amp; Experience.</h2>
+          <p>Delivering high-caliber digital solutions with rigorous clean-code principles and modern web standards.</p>
+        </div>
+
+        <div class="experience-timeline reveal">
+          <article class="experience-card spotlight-card">
+            <div class="experience-mark" aria-hidden="true">CM</div>
+            <div class="experience-content">
+              <div class="experience-title-row">
+                <div>
+                  <span class="project-kicker">Jul 2026 – Present</span>
+                  <h3>Web Developer</h3>
+                  <p class="company-name">CyberMedia <span class="tag-status">Active</span></p>
+                </div>
+                <p class="experience-location">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Gurugram, Haryana · On-site
+                </p>
+              </div>
+              <p class="experience-summary">
+                Leading custom WordPress and full-stack front-end development. Architecting mobile-first responsive interfaces, cross-browser compatibility, client-side performance audits, and bespoke PHP/JavaScript integrations.
+              </p>
+              <div class="pill-list" aria-label="CyberMedia skills">
+                <span class="pill">WordPress Architecture</span>
+                <span class="pill">JavaScript (ES6+)</span>
+                <span class="pill">PHP</span>
+                <span class="pill">HTML5/CSS3</span>
+                <span class="pill">Responsive Systems</span>
+                <span class="pill">UI/UX Precision</span>
+              </div>
+            </div>
+            <a class="experience-link" href="https://www.linkedin.com/in/akhil-rana-6aa03228b/" target="_blank" rel="noopener">
+              <span>LinkedIn</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div class="heading-flex">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-num">03 /</span> Showcase</p>
+              <h2>Featured Projects.</h2>
+              <p>Explore production-grade full-stack systems, dynamic web applications, and intuitive user experiences.</p>
+            </div>
+            <div class="hint-pill">Click any card to inspect stack &amp; architecture</div>
+          </div>
+        </div>
+
+        <div class="work-grid">
+          <!-- Card 1 -->
+          <article class="project-card featured spotlight-card reveal" data-project="0" tabindex="0" role="button">
+            <div class="card-glow-bg"></div>
+            <div class="card-top">
+              <span class="project-kicker">01 // Full-Stack Commerce</span>
+              <span class="card-badge">Featured</span>
+            </div>
+            <div class="card-body">
+              <h3>E-Commerce Web Platform</h3>
+              <p>A full-cycle digital storefront engineered with Node.js, Express, and MongoDB. Includes tokenized authentication, cart state persistence, and responsive checkout pipelines.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-tags">
+                <span class="tag-tech">Node.js</span>
+                <span class="tag-tech">Express</span>
+                <span class="tag-tech">MongoDB</span>
+              </div>
+              <a class="project-link" href="https://github.com/AkhilRana2004/Ecommerce-Website" target="_blank" rel="noopener" aria-label="View E-Commerce repo">
+                <span>View Repo</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="project-card tall spotlight-card reveal" data-project="1" tabindex="0" role="button">
+            <div class="card-glow-bg"></div>
+            <div class="card-top">
+              <span class="project-kicker">02 // Culinary UI &amp; Booking</span>
+            </div>
+            <div class="card-body">
+              <h3>Sushi Restaurant Experience</h3>
+              <p>An immersive Japanese dining portal with dynamic menu filtering, interactive reservation workflows, and responsive enquiry endpoints.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-tags">
+                <span class="tag-tech">JavaScript</span>
+                <span class="tag-tech">Node.js</span>
+                <span class="tag-tech">MongoDB</span>
+              </div>
+              <a class="project-link" href="https://github.com/AkhilRana2004/Sushi-Lover-Website" target="_blank" rel="noopener" aria-label="View Sushi Restaurant repo">
+                <span>View Repo</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="project-card spotlight-card reveal" data-project="2" tabindex="0" role="button">
+            <div class="card-glow-bg"></div>
+            <div class="card-top">
+              <span class="project-kicker">03 // Productivity Suite</span>
+            </div>
+            <div class="card-body">
+              <h3>Job Finder &amp; Expense Tracker</h3>
+              <p>Two integrated productivity tools: intelligent job search with REST integrations, paired with a real-time expense calculator and balance tracker.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-tags">
+                <span class="tag-tech">React / JS</span>
+                <span class="tag-tech">REST APIs</span>
+              </div>
+              <a class="project-link" href="https://github.com/AkhilRana2004/Projects-frontend" target="_blank" rel="noopener" aria-label="View frontend projects repo">
+                <span>View Repo</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="project-card spotlight-card reveal" data-project="3" tabindex="0" role="button">
+            <div class="card-glow-bg"></div>
+            <div class="card-top">
+              <span class="project-kicker">04 // Media Discovery</span>
+            </div>
+            <div class="card-body">
+              <h3>Cinematic Movie Explorer</h3>
+              <p>High-performance media streaming catalog featuring asynchronous query debounce, instant genre categorization, and lazy-loaded movie posters.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-tags">
+                <span class="tag-tech">Vanilla JS</span>
+                <span class="tag-tech">Async API</span>
+              </div>
+              <a class="project-link" href="https://github.com/AkhilRana2004/Movie-Website" target="_blank" rel="noopener" aria-label="View Movie app repo">
+                <span>View Repo</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="project-card spotlight-card reveal" data-project="4" tabindex="0" role="button">
+            <div class="card-glow-bg"></div>
+            <div class="card-top">
+              <span class="project-kicker">05 // Personal Ecosystem</span>
+            </div>
+            <div class="card-body">
+              <h3>Portfolio Engineering Engine</h3>
+              <p>Sub-second loading personal platform built with modular CSS, hardware-accelerated canvas animations, and clean semantic markup.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-tags">
+                <span class="tag-tech">CSS Canvas</span>
+                <span class="tag-tech">ES Modules</span>
+              </div>
+              <a class="project-link" href="https://github.com/AkhilRana2004/Portfolio-Website" target="_blank" rel="noopener" aria-label="View portfolio repo">
+                <span>View Repo</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="wrap about-layout">
+        <div class="about-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-num">04 /</span> Background</p>
+          <h2>Engineering with purpose, scaled for impact.</h2>
+          <p>
+            I hold a degree in <strong>Computer Science Engineering from Chandigarh University</strong>. My core passion lies at the intersection of robust backend logic, fluid interactive design, and reliable software architecture.
+          </p>
+          <p>
+            Whether implementing clean RESTful endpoints, modeling database schemas, or tuning client-side Web Vitals, I treat every project with a high standard of craft and user empathy.
+          </p>
+          
+          <div class="about-highlights">
+            <div class="highlight-box">
+              <span class="highlight-title">Backend &amp; DBs</span>
+              <p>Node.js, Express, MongoDB, MySQL, scalable RESTful API design.</p>
+            </div>
+            <div class="highlight-box">
+              <span class="highlight-title">Frontend &amp; UI</span>
+              <p>Modern JavaScript (ES6+), React, CSS animations, Responsive Web Design.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-panel spotlight-card reveal">
+          <div class="skills-header">
+            <h3>Technical Toolkit &amp; Stack</h3>
+            <span class="skills-sub">Constantly evolving</span>
+          </div>
+
+          <div class="skill-category">
+            <span class="category-name">Core Languages &amp; Frameworks</span>
+            <div class="pill-list">
+              <span class="pill"><i class="devicon-javascript-plain"></i>JavaScript (ES6+)</span>
+              <span class="pill"><i class="devicon-react-original"></i>React.js</span>
+              <span class="pill"><i class="devicon-nodejs-plain"></i>Node.js</span>
+              <span class="pill"><i class="devicon-express-original"></i>Express</span>
+              <span class="pill"><i class="devicon-python-plain"></i>Python</span>
+              <span class="pill"><i class="devicon-java-plain"></i>Java</span>
+              <span class="pill"><i class="devicon-cplusplus-plain"></i>C / C++</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <span class="category-name">Databases &amp; Architecture</span>
+            <div class="pill-list">
+              <span class="pill"><i class="devicon-mongodb-plain"></i>MongoDB</span>
+              <span class="pill"><i class="devicon-mysql-plain"></i>MySQL</span>
+              <span class="pill"><i class="devicon-fastapi-plain"></i>REST APIs</span>
+              <span class="pill"><i class="devicon-html5-plain"></i>Semantic HTML5</span>
+              <span class="pill"><i class="devicon-css3-plain"></i>Modern CSS3</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <span class="category-name">Tools &amp; Workflows</span>
+            <div class="pill-list">
+              <span class="pill"><i class="devicon-git-plain"></i>Git &amp; GitHub</span>
+              <span class="pill"><i class="devicon-wordpress-plain"></i>WordPress</span>
+              <span class="pill"><i class="devicon-photoshop-plain"></i>Photoshop</span>
+              <span class="pill"><i class="devicon-vscode-plain"></i>VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="wrap contact-card spotlight-card reveal">
+        <div class="contact-sparkle" aria-hidden="true"></div>
+        <div class="contact-copy">
+          <p class="eyebrow"><span class="eyebrow-num">05 /</span> Next Steps</p>
+          <h2>Let's build something extraordinary together.</h2>
+          <p>
+            Whether you have an exciting software engineering vacancy, a freelance opportunity, or just want to brainstorm tech, my inbox is always open.
+          </p>
+        </div>
+
+        <div class="contact-cta-group">
+          <a class="button primary email-btn glow-button" href="mailto:akhuniikhu5523@gmail.com">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>akhuniikhu5523@gmail.com</span>
+          </a>
+        </div>
+
+        <div class="contact-links">
+          <a class="contact-link-pill" href="tel:7888948258">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +91 78889 48258
+          </a>
+          <a class="contact-link-pill" href="https://github.com/AkhilRana2004" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a class="contact-link-pill" href="https://www.linkedin.com/in/akhil-rana-6aa03228b/" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer><div class="wrap">© 2026 Akhil Rana. Designed and built with intent.</div></footer>
-  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-content"><button class="modal-close" id="closeModal" aria-label="Close project details">×</button><p class="eyebrow" id="modalMeta">Project details</p><h2 id="modalTitle">Project title</h2><p id="modalDesc"></p><div class="pill-list" id="modalStack"></div><a class="button primary" href="#" target="_blank" rel="noopener" id="modalLink">Browse repository ↗</a></div></div>
+
+  <footer class="site-footer">
+    <div class="wrap footer-wrap">
+      <p>© 2026 Akhil Rana. Designed with modern minimalism &amp; performance in mind.</p>
+      <a href="#home" class="back-to-top" aria-label="Back to top">
+        <span>Back to Top</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Project Details Modal -->
+  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal" aria-label="Close project details">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <div class="modal-header">
+        <p class="eyebrow" id="modalMeta">Case Study</p>
+        <h2 id="modalTitle">Project Title</h2>
+      </div>
+      <div class="modal-body">
+        <p id="modalDesc"></p>
+        <div class="modal-stack-section">
+          <span class="modal-section-title">Core Technologies</span>
+          <div class="pill-list" id="modalStack"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a class="button primary glow-button" href="#" target="_blank" rel="noopener" id="modalLink">
+          <span>Explore Source Repository</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <script src="app.js"></script>
-</body></html>
+</body>
+</html>
